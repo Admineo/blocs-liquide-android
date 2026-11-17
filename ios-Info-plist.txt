@@ -1,0 +1,16 @@
+À AJOUTER dans ios/App/App/Info.plist (Xcode > App > Info, ou en éditant le fichier), à l'intérieur de <dict> :
+
+<key>NSPhotoLibraryUsageDescription</key>
+<string>BLOCS utilise une photo de votre choix comme fond d'écran. La photo reste sur votre appareil. / BLOCS uses a photo you choose as the game background. The photo stays on your device.</string>
+
+<key>NSCameraUsageDescription</key>
+<string>Le sélecteur de photos du système peut proposer l'appareil photo pour choisir votre fond d'écran. / The system photo picker may offer the camera to choose your background.</string>
+
+<key>ITSAppUsesNonExemptEncryption</key>
+<false/>
+
+<key>UISupportedInterfaceOrientations</key>
+<array><string>UIInterfaceOrientationPortrait</string></array>
+
+Dans Xcode > cible App > General > Deployment Info : décochez iPad (iPhone uniquement),
+sinon Apple exigera aussi des captures d'écran iPad.

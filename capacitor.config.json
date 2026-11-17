@@ -1,0 +1,16 @@
+{
+  "appId": "com.bayram.blocs",
+  "appName": "BLOCS",
+  "webDir": "www",
+  "backgroundColor": "#0b1230",
+  "server": {
+    "androidScheme": "https"
+  },
+  "ios": {
+    "contentInset": "never",
+    "backgroundColor": "#0b1230"
+  },
+  "android": {
+    "backgroundColor": "#0b1230"
+  }
+}

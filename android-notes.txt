@@ -1,0 +1,21 @@
+ANDROID : réglages à vérifier après « npx cap add android »
+
+1) android/variables.gradle
+   minSdkVersion = 24 (ou la valeur proposée par Capacitor)
+   compileSdkVersion = 36 et targetSdkVersion = 36 (ou plus). Google Play exige un niveau cible récent pour les nouvelles apps :
+   si Capacitor propose un nombre plus petit, remplacez-le par 36 (ou la valeur exigée le jour de l'envoi), puis testez.
+
+2) android/app/build.gradle
+   applicationId "com.bayram.blocs"
+   versionCode 1        (entier, +1 à chaque nouvelle version envoyée)
+   versionName "1.0.0"
+
+3) android/app/src/main/AndroidManifest.xml
+   Dans <activity ...> ajoutez : android:screenOrientation="portrait"
+
+4) android/app/src/main/res/values/strings.xml
+   app_name = BLOCS   (nom affiché sous l'icône)
+
+5) Fichier à envoyer à Google Play : un « Android App Bundle » (.aab)
+   Android Studio > Build > Generate Signed App Bundle / APK > Android App Bundle
+   Créez une clé (keystore) et SAUVEGARDEZ-LA (2 copies + mot de passe) : sans elle vous ne pourrez plus mettre à jour l'app.

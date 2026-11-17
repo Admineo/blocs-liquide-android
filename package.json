@@ -1,0 +1,21 @@
+{
+  "name": "blocs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BLOCS - Liquid block puzzle",
+  "scripts": {
+    "copy": "node scripts/copy-www.js",
+    "assets": "capacitor-assets generate --iconBackgroundColor #0b1230 --iconBackgroundColorDark #0b1230 --splashBackgroundColor #0b1230 --splashBackgroundColorDark #0b1230",
+    "sync": "npm run copy && cap sync",
+    "android": "npm run sync && cap open android",
+    "ios": "npm run sync && cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.2",
+    "@capacitor/core": "^8.6.2"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^4.0.0",
+    "@capacitor/cli": "^8.6.2"
+  }
+}
